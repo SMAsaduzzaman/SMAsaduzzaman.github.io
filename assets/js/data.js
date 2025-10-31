@@ -57,7 +57,7 @@ const portfolioData = {
             
             // Statistics
             stats: [
-                { count: 25+, label: "Projects Completed" },
+                { count: 25, label: "Projects Completed" },
                 { count: 5, label: "Research Papers" },
                 { count: 5, label: "Years Experience" },
                 { count: 15, label: "Technologies" }
