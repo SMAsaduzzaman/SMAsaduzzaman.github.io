@@ -14,7 +14,7 @@ function initializePortfolio() {
     // Initialize theme first
     initializeTheme();
     
-    // Show loading screen briefly for effect
+    // Show loading screen briefly for effect (reduced from 1500ms to 300ms)
     setTimeout(() => {
         hideLoadingScreen();
         initializeNavigation();
@@ -26,14 +26,14 @@ function initializePortfolio() {
         initializeContactForm();
         initializeParallax();
         
-        // Re-initialize everything after data loads
+        // Re-initialize everything after data loads (reduced from 2000ms to 800ms)
         setTimeout(() => {
             console.log('Re-initializing after data load...');
             initializeProjectFilters();
             initializeSkillBars();
             initializeScrollAnimations();
-        }, 2000);
-    }, 1500);
+        }, 800);
+    }, 300);
 }
 
 // ===== LOADING SCREEN =====
@@ -458,16 +458,33 @@ function initializeContactForm() {
             return;
         }
         
-        // Send email using EmailJS
-        const templateParams = {
-            from_name: name,
-            from_email: email,
-            subject: subject,
-            message: message,
-            to_email: 'smasaduzzaman95@gmail.com' // Your email
-        };
+        // Check if EmailJS is available
+        if (typeof emailjs === 'undefined') {
+            console.error('❌ EmailJS is not loaded!');
+            showEnhancedNotification('Email service not available. Please try again later.', 'error');
+            submitBtn.innerHTML = originalText;
+            submitBtn.disabled = false;
+            return;
+        }
+
+        if (typeof EMAIL_CONFIG === 'undefined') {
+            console.error('❌ EMAIL_CONFIG is not defined!');
+            showEnhancedNotification('Email configuration missing. Please contact directly.', 'error');
+            submitBtn.innerHTML = originalText;
+            submitBtn.disabled = false;
+            return;
+        }
+
+        console.log('📧 Sending email with config:', {
+            serviceId: EMAIL_CONFIG.serviceId,
+            templateId: EMAIL_CONFIG.templateId,
+            publicKey: EMAIL_CONFIG.publicKey
+        });
+
+        // Use sendForm method which automatically maps form field names
+        console.log('📧 Sending form directly with EmailJS...');
         
-        emailjs.send(EMAIL_CONFIG.serviceId, EMAIL_CONFIG.templateId, templateParams)
+        emailjs.sendForm(EMAIL_CONFIG.serviceId, EMAIL_CONFIG.templateId, form)
             .then((response) => {
                 console.log('Email sent successfully!', response.status, response.text);
                 

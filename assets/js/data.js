@@ -213,37 +213,162 @@ const portfolioData = {
         ]
     },
 
+    // ===== AWARDS =====
+    awards: [
+        {
+            title: "Summa Cum Laude",
+            institution: "American International University-Bangladesh (AIUB)",
+            year: "2019",
+            description: "Receiving The Summa Cum Laude From The Honorable Dean and Associate Dean",
+            image: "assets/img/summacumlaudemain.jpg",
+            details: [
+                "Summa cum laude is an honorary title used by educational institutions to signify a degree that was earned 'with the highest distinction.'"
+            ]
+        },
+        {
+            title: "Dean's For Capstone",
+            institution: "American International University-Bangladesh (AIUB)",
+            year: "2019",
+            description: "Receiving Capstone From The Honorable Dean and Associate Dean",
+            image: "assets/img/Capstone.jpg",
+            details: [
+                "Only Three group have Selected among the 100 groups",
+                "I was Selected for Capstone Project along with my three groupmates"
+            ]
+        },
+        {
+            title: "Dean's For Academic",
+            institution: "American International University-Bangladesh (AIUB)",
+            year: "2016-2019",
+            description: "Receiving Deans Award For The First Time",
+            image: "assets/img/Deans2.jpg",
+            details: [
+                "A dean's list is an academic award, or distinction, used to recognize the highest level scholarship demonstrated by students in a college or university",
+                "I have Received This Award For 4 Times"
+            ]
+        }
+    ],
+
+    // ===== EXTRACURRICULAR ACTIVITIES =====
+    extracurricular: {
+        charity: [
+            {
+                title: "Alor Swapno",
+                type: "Charity Organization",
+                role: "Volunteer & Social Activist",
+                period: "2018 - Present",
+                description: "Active involvement in educational support and social welfare initiatives, helping underprivileged communities through various charitable programs and awareness campaigns.",
+                image: "assets/img/alor-swapno-logo.jpg", // Add logo when available
+                activities: [
+                    "Educational support for underprivileged children",
+                    "Community welfare programs",
+                    "Social awareness campaigns",
+                    "Fundraising for educational materials"
+                ],
+                impact: "Contributed to educational support for 200+ children"
+            }
+        ],
+        interviews: [
+            {
+                title: "Interview by Jafor Iqbal",
+                publication: "Prothom Alor Kishor Alo",
+                interviewer: "Jafor Iqbal",
+                date: "2019",
+                type: "Media Interview",
+                description: "Featured interview discussing academic achievements, research interests, and future aspirations in data science and technology.",
+                topics: [
+                    "Academic excellence and achievements",
+                    "Research interests in AI and ML",
+                    "Future career aspirations",
+                    "Student life and challenges"
+                ],
+                image: "assets/img/interview-jafor-iqbal.jpg", // Add image when available
+                link: "#" // Add external link if available
+            },
+            {
+                title: "Interview by Ahsan Habib",
+                publication: "Prothom Alor Kishor Alo",
+                interviewer: "Ahsan Habib",
+                date: "2019",
+                type: "Media Interview", 
+                description: "In-depth discussion about educational journey, technical projects, and contributions to student community development.",
+                topics: [
+                    "Educational journey and milestones",
+                    "Technical project achievements",
+                    "Community involvement",
+                    "Leadership experiences"
+                ],
+                image: "assets/img/interview-ahsan-habib.jpg", // Add image when available
+                link: "#" // Add external link if available
+            }
+        ],
+        awards: [
+            {
+                title: "Creative Writing Excellence",
+                category: "Poetry",
+                work: "Digital Dreams", // Name of the poem/work
+                year: "2019",
+                organization: "University Literary Society",
+                description: "First place award for contemporary poetry addressing technology's impact on society and human connections.",
+                achievement: "1st Place",
+                image: "assets/img/poetry-award-certificate.jpg", // Add certificate image when available
+                workDescription: "A collection of poems exploring the intersection of technology and human emotion"
+            },
+            {
+                title: "Student Writer of the Year",
+                category: "Creative Writing",
+                work: "Tech Tales", // Name of the work
+                year: "2018", 
+                organization: "Campus Literary Magazine",
+                description: "Recognition for outstanding contributions to university literary publications and creative writing excellence.",
+                achievement: "Annual Recognition",
+                image: "assets/img/writing-award-certificate.jpg", // Add certificate image when available
+                workDescription: "Series of short stories about technology's role in modern life"
+            }
+        ]
+    },
+
     // ===== PUBLICATIONS =====
     publications: [
         {
             title: "MIRACLE: Malware Image Recognition and Classification by Layered Extraction",
             journal: "Data Mining and Knowledge Discovery, Springer US, 2025",
             authors: "Inzamamul Alam, Md Samiullah, S M Asaduzzaman, et al.",
-            tags: ["Machine Learning", "Computer Vision", "Cybersecurity"]
+            tags: ["Machine Learning", "Computer Vision", "Cybersecurity"],
+            link: "https://dl.acm.org/doi/10.1145/3871765",
+            linkText: "ACM Digital Library (open-access)"
         },
         {
             title: "Analysing and Identifying COVID-19 Risk Factors using Machine Learning",
             journal: "6th International Conference on Inventive Systems and Control (ICISC), 2022",
             authors: "Shah Siddiqui, Elias Hossain, S M Asaduzzaman, et al.",
-            tags: ["Healthcare", "Machine Learning", "Mobile Apps"]
+            tags: ["Healthcare", "Machine Learning", "Mobile Apps"],
+            link: "https://link.springer.com/article/10.1007/s11042-022-12915-5",
+            linkText: "Springer Link (open-access)"
         },
         {
             title: "An Efficient Sign Language Translator Device using CNN",
             journal: "International Conference on Communication Engineering and Technology, 2019",
             authors: "S. A. Khan, S. M. Asaduzzaman, A. Debnath, M. Hossain",
-            tags: ["Computer Vision", "CNN", "Accessibility"]
+            tags: ["Computer Vision", "CNN", "Accessibility"],
+            link: "https://ieeexplore.ieee.org/document/8903606",
+            linkText: "IEEE Xplore (open-access)"
         },
         {
             title: "Industrial Product Defect Detection Using Custom U-Net",
             journal: "International Conference on Computer and Information Technology (ICCIT)",
             authors: "Al Amin, Hongjie Ma, S M Asaduzzaman, et al.",
-            tags: ["Deep Learning", "U-Net", "Quality Control"]
+            tags: ["Deep Learning", "U-Net", "Quality Control"],
+            link: "https://researchportal.port.ac.uk/en/publications/industrial-product-defect-detection-using-custom-u-net",
+            linkText: "University of Portsmouth Research Portal"
         },
         {
             title: "Hybrid ML Model for Ecofriendly Travelling and Carbon Emission Reduction",
             journal: "International Conference on Computer and Information Technology (ICCIT)",
             authors: "Elias Hossain, Wahidur Rahman, S M Asaduzzaman, et al.",
-            tags: ["Environmental", "NLP", "Sustainability"]
+            tags: ["Environmental", "NLP", "Sustainability"],
+            link: "https://researchportal.port.ac.uk/en/publications/hybrid-machine-learning-model-for-a-next-generation-ecofriendly-t",
+            linkText: "University of Portsmouth Research Portal"
         }
     ]
 };
