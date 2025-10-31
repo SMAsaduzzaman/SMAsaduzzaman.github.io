@@ -46,7 +46,7 @@ const portfolioData = {
                 {
                     icon: "fas fa-briefcase",
                     title: "Experience", 
-                    description: "5+ years in research, data analysis, and machine learning across humanitarian, healthcare, and cultural preservation sectors"
+                    description: "5+ years in research, data analysis, and machine learning across humanitarian, healthcare, telemedicine and education"
                 },
                 {
                     icon: "fas fa-award",
@@ -57,7 +57,7 @@ const portfolioData = {
             
             // Statistics
             stats: [
-                { count: 50, label: "Projects Completed" },
+                { count: 25+, label: "Projects Completed" },
                 { count: 5, label: "Research Papers" },
                 { count: 5, label: "Years Experience" },
                 { count: 15, label: "Technologies" }
