@@ -24,7 +24,7 @@
     --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
     
     /* Typography */
-    --font-primary: 'Inter', sans-serif;
+    --font-primary: 'Nunito', sans-serif;
     --font-mono: 'JetBrains Mono', monospace;
     --font-size-xs: 0.75rem;
     --font-size-sm: 0.875rem;

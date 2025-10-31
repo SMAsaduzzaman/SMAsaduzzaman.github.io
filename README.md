@@ -296,6 +296,63 @@ To customize dark mode colors, edit the CSS variables in `assets/css/style.css`:
 
 ---
 
+# 🔤 **Font Customization**
+
+Your portfolio uses **Nunito** font for a friendly, modern look. You can easily change to other beautiful fonts.
+
+## 🎨 **How to Change Fonts**
+
+### **Step 1**: Update the Google Fonts link in `index.html`:
+
+```html
+<!-- Choose one of these font imports -->
+
+<!-- Option 1: Nunito (Current - Friendly & Modern) -->
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<!-- Option 2: Poppins (Modern & Clean) -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<!-- Option 3: Roboto (Professional & Readable) -->
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<!-- Option 4: Source Sans Pro (Clean & Professional) -->
+<link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<!-- Option 5: Outfit (Contemporary & Stylish) -->
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+```
+
+### **Step 2**: Update the font variable in `assets/css/style.css`:
+
+```css
+:root {
+    /* Choose one of these font families */
+    --font-primary: 'Nunito', sans-serif;         /* Current */
+    --font-primary: 'Poppins', sans-serif;        /* Option 2 */
+    --font-primary: 'Roboto', sans-serif;         /* Option 3 */
+    --font-primary: 'Source Sans Pro', sans-serif; /* Option 4 */
+    --font-primary: 'Outfit', sans-serif;         /* Option 5 */
+}
+```
+
+## 🎯 **Font Recommendations**
+
+- **Nunito** (Current): Excellent for friendly, approachable design
+- **Poppins**: Perfect for modern, tech-focused portfolios
+- **Roboto**: Great for professional, corporate feel
+- **Source Sans Pro**: Clean and highly readable
+- **Outfit**: Contemporary and stylish
+
+## 📱 **Testing Your Font Choice**
+
+1. Update both the HTML and CSS files
+2. Refresh your browser
+3. Check readability on different screen sizes
+4. Ensure it matches your personal brand
+
+---
+
 # 📧 **Contact Form Email Setup**
 
 Your portfolio includes a working contact form that can send real emails using EmailJS (free service).
