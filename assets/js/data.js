@@ -137,7 +137,7 @@ const portfolioData = {
             technologies: ["Python", "Scikit-learn", "Flask", "Docker"],
             category: ["ml", "web"],
             links: {
-                demo: "#",
+                demo: "https://maternalrisk.onrender.com",
                 github: "#"
             }
         },
@@ -179,7 +179,7 @@ const portfolioData = {
             technologies: ["Random Forest", "Flask", "Docker", "Render"],
             category: ["web", "ml"],
             links: {
-                demo: "#",
+                demo: "https://diabeticspred.onrender.com",
                 github: "#"
             }
         }
@@ -265,7 +265,7 @@ const portfolioData = {
                     "Social awareness campaigns",
                     "Fundraising for educational materials"
                 ],
-                impact: "Contributed to educational support for 200+ children"
+                impact: "Contributed to educational support for 50+ children"
             }
         ],
         interviews: [
@@ -306,26 +306,15 @@ const portfolioData = {
         ],
         awards: [
             {
-                title: "Creative Writing Excellence",
-                category: "Poetry",
-                work: "Digital Dreams", // Name of the poem/work
-                year: "2019",
-                organization: "University Literary Society",
-                description: "First place award for contemporary poetry addressing technology's impact on society and human connections.",
-                achievement: "1st Place",
-                image: "assets/img/poetry-award-certificate.jpg", // Add certificate image when available
-                workDescription: "A collection of poems exploring the intersection of technology and human emotion"
-            },
-            {
-                title: "Student Writer of the Year",
-                category: "Creative Writing",
-                work: "Tech Tales", // Name of the work
-                year: "2018", 
-                organization: "Campus Literary Magazine",
-                description: "Recognition for outstanding contributions to university literary publications and creative writing excellence.",
-                achievement: "Annual Recognition",
-                image: "assets/img/writing-award-certificate.jpg", // Add certificate image when available
-                workDescription: "Series of short stories about technology's role in modern life"
+                title: "Poem Title: নষ্ট ইচ্ছা (Lost Desire)",
+                  category: "Creative Writing",
+                  work: "Poem",
+                  year: "2018",
+                  organization: "Campus Literary Magazine",
+                  description: "Recognized by the judge panel for creative writing excellence and emotional depth.",
+                  achievement: "Judge Panel Choice Writer",
+                  image: "assets/img/poem_award.jpg",
+                  workDescription: "A Bengali poem reflecting inner turmoil, moral decay, and the haunting persistence of love even through self-destruction.
             }
         ]
     },
