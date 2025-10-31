@@ -8,7 +8,18 @@ const EMAIL_CONFIG = {
 
 // Initialize EmailJS when this script loads
 if (typeof emailjs !== 'undefined') {
-    emailjs.init(EMAIL_CONFIG.publicKey);
+    // Use the newer init method with options
+    emailjs.init({
+        publicKey: EMAIL_CONFIG.publicKey,
+        // Add CORS options for local testing
+        blockHeadless: true,
+        limitRate: {
+            id: 'app',
+            throttle: 10000,
+        },
+    });
+    console.log('✅ EmailJS initialized successfully with public key:', EMAIL_CONFIG.publicKey);
 } else {
     console.warn('EmailJS not loaded yet. Will initialize later.');
 }
+

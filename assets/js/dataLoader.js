@@ -21,6 +21,12 @@ function loadPortfolioData() {
     // Load skills
     loadSkills();
     
+    // Load awards
+    loadAwards();
+    
+    // Load extracurricular activities
+    loadExtracurricular();
+    
     // Load publications
     loadPublications();
     
@@ -287,6 +293,202 @@ function loadSkills() {
     }
 }
 
+// ===== LOAD AWARDS =====
+function loadAwards() {
+    console.log('🏆 loadAwards function called');
+    const awardsGrid = document.querySelector('.awards-grid');
+    
+    if (!awardsGrid) {
+        console.error('❌ Awards grid element not found!');
+        return;
+    }
+    
+    console.log('✅ Awards grid found');
+    
+    if (!portfolioData || !portfolioData.awards) {
+        console.error('❌ Portfolio data or awards not found:', portfolioData);
+        return;
+    }
+    
+    console.log('✅ Found', portfolioData.awards.length, 'awards to load');
+    
+    // Clear existing awards
+    awardsGrid.innerHTML = '';
+    
+    portfolioData.awards.forEach((award, index) => {
+        console.log(`🎖️ Loading award ${index + 1}:`, award.title);
+        
+        const awardCard = document.createElement('div');
+        awardCard.className = 'award-card';
+        
+        // Clean award card content
+        awardCard.innerHTML = `
+            <div class="award-image">
+                <img src="${award.image}" alt="${award.title}" 
+                     onerror="console.error('Image failed to load: ${award.image}')">
+            </div>
+            <div class="award-content">
+                <div class="award-header">
+                    <h3 class="award-title">${award.title}</h3>
+                    <p class="award-institution">${award.institution}</p>
+                    <span class="award-year">${award.year}</span>
+                </div>
+                <p class="award-description">${award.description}</p>
+                <div class="award-details">
+                    <ul>
+                        ${award.details.map(detail => `<li>${detail}</li>`).join('')}
+                    </ul>
+                </div>
+            </div>
+        `;
+        
+        console.log('🔧 Created award card element:', awardCard);
+        console.log('🔧 Award card HTML:', awardCard.outerHTML);
+        
+        awardsGrid.appendChild(awardCard);
+        console.log('🔧 Appended to grid. Grid children count:', awardsGrid.children.length);
+        
+        // Verify it was actually added
+        const gridChildren = awardsGrid.querySelectorAll('.award-card');
+        console.log('🔧 Award cards in grid:', gridChildren.length);
+    });
+    
+    console.log('✅ Awards loaded successfully');
+}
+
+// ===== LOAD EXTRACURRICULAR ACTIVITIES =====
+function loadExtracurricular() {
+    console.log('🌟 loadExtracurricular function called');
+    
+    if (!portfolioData || !portfolioData.extracurricular) {
+        console.warn('❌ No extracurricular data found');
+        return;
+    }
+    
+    // Load charity activities
+    loadCharityActivities();
+    
+    // Load interviews
+    loadInterviews();
+    
+    // Load creative awards
+    loadCreativeAwards();
+    
+    console.log('✅ Extracurricular activities loaded successfully');
+}
+
+// Load charity activities
+function loadCharityActivities() {
+    const charityGrid = document.querySelector('.charity-grid');
+    if (!charityGrid) return;
+    
+    charityGrid.innerHTML = '';
+    
+    if (!portfolioData.extracurricular.charity || portfolioData.extracurricular.charity.length === 0) {
+        return;
+    }
+    
+    portfolioData.extracurricular.charity.forEach(charity => {
+        const charityCard = document.createElement('div');
+        charityCard.className = 'charity-card';
+        
+        // Let CSS handle all styling
+        
+        charityCard.innerHTML = `
+            <div class="charity-header">
+                <div class="charity-logo">
+                    <i class="fas fa-heart"></i>
+                </div>
+                <div class="charity-info">
+                    <h4>${charity.title}</h4>
+                    <p class="charity-type">${charity.type}</p>
+                    <p class="charity-role">${charity.role}</p>
+                    <span class="charity-period">${charity.period}</span>
+                </div>
+            </div>
+            <p class="charity-description">${charity.description}</p>
+            <div class="charity-activities">
+                <h5>Key Activities</h5>
+                <ul>
+                    ${charity.activities.map(activity => `<li>${activity}</li>`).join('')}
+                </ul>
+            </div>
+            <div class="charity-impact">
+                ${charity.impact}
+            </div>
+        `;
+        
+        charityGrid.appendChild(charityCard);
+    });
+}
+
+// Load interviews
+function loadInterviews() {
+    const interviewsGrid = document.querySelector('.interviews-grid');
+    if (!interviewsGrid) return;
+    
+    interviewsGrid.innerHTML = '';
+    
+    if (!portfolioData.extracurricular.interviews || portfolioData.extracurricular.interviews.length === 0) {
+        return;
+    }
+    
+    portfolioData.extracurricular.interviews.forEach(interview => {
+        const interviewCard = document.createElement('div');
+        interviewCard.className = 'interview-card';
+        
+        // Let CSS handle all styling
+        
+        interviewCard.innerHTML = `
+            <h4 class="interview-title">${interview.title}</h4>
+            <div class="interview-meta">
+                <span class="interview-publication">${interview.publication}</span>
+                <span class="interview-date">${interview.date}</span>
+            </div>
+            <p class="interview-description">${interview.description}</p>
+            <div class="interview-topics">
+                <h5>Topics Discussed</h5>
+                <div class="topics-list">
+                    ${interview.topics.map(topic => `<span class="topic-tag">${topic}</span>`).join('')}
+                </div>
+            </div>
+        `;
+        
+        interviewsGrid.appendChild(interviewCard);
+    });
+}
+
+// Load creative awards
+function loadCreativeAwards() {
+    const creativeAwardsGrid = document.querySelector('.creative-awards-grid');
+    if (!creativeAwardsGrid) return;
+    
+    creativeAwardsGrid.innerHTML = '';
+    
+    if (!portfolioData.extracurricular.awards || portfolioData.extracurricular.awards.length === 0) {
+        return;
+    }
+    
+    portfolioData.extracurricular.awards.forEach(award => {
+        const awardCard = document.createElement('div');
+        awardCard.className = 'creative-award-card';
+        
+        awardCard.innerHTML = `
+            <div class="award-achievement">${award.achievement}</div>
+            <h4 class="award-title">${award.title}</h4>
+            <p class="award-work">"${award.work}"</p>
+            <div class="award-meta">
+                <span class="award-year">${award.year}</span>
+                <span class="award-organization">${award.organization}</span>
+            </div>
+            <p class="award-description">${award.description}</p>
+            <div class="work-description">${award.workDescription}</div>
+        `;
+        
+        creativeAwardsGrid.appendChild(awardCard);
+    });
+}
+
 // ===== LOAD PUBLICATIONS =====
 function loadPublications() {
     const publicationsGrid = document.querySelector('.publications-grid');
@@ -310,11 +512,22 @@ function loadPublications() {
                 <div class="publication-tags">
                     ${pub.tags.map(tag => `<span class="tag">${tag}</span>`).join('')}
                 </div>
+                ${pub.link ? `
+                    <div class="publication-link" style="margin-top: 1rem;">
+                        <a href="${pub.link}" target="_blank" rel="noopener noreferrer" 
+                           style="display: inline-flex; align-items: center; gap: 0.5rem; background: #3b82f6; color: white; padding: 0.5rem 1rem; border-radius: 8px; text-decoration: none; font-size: 0.9rem; font-weight: 500; transition: all 0.3s ease;">
+                            <i class="fas fa-external-link-alt" style="font-size: 0.8rem;"></i>
+                            ${pub.linkText}
+                        </a>
+                    </div>
+                ` : ''}
             </div>
         `;
         
         publicationsGrid.appendChild(publicationCard);
     });
+    
+    console.log('Publications loaded successfully');
 }
 
 // ===== UPDATE TYPING ANIMATION =====

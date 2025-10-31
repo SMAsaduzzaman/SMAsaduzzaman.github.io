@@ -16,6 +16,13 @@
     <meta property="og:url" content="https://smasaduzzaman.github.io/">
     <meta property="og:type" content="website">
     
+    <!-- Font Preconnects for Performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <!-- Preload Critical CSS -->
+    <link rel="preload" href="assets/css/style.css" as="style">
+    
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
     
@@ -49,6 +56,8 @@
                 <a href="#experience" class="nav-link">Experience</a>
                 <a href="#projects" class="nav-link">Projects</a>
                 <a href="#skills" class="nav-link">Skills</a>
+                <a href="#awards" class="nav-link">Awards</a>
+                <a href="#extracurricular" class="nav-link">Activities</a>
                 <a href="#publications" class="nav-link">Publications</a>
                 <a href="#contact" class="nav-link">Contact</a>
             </div>
@@ -668,11 +677,70 @@
         </div>
     </section>
 
+    <!-- Awards Section -->
+    <section id="awards" class="awards">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-number">05</span>
+                <h2 class="section-title">Awards & Recognition</h2>
+                <p class="section-subtitle">Academic achievements and honors received</p>
+            </div>
+            
+            <div class="awards-grid">
+                <!-- Awards will be loaded dynamically -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Extracurricular & Recognition Section -->
+    <section id="extracurricular" class="extracurricular">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-number">06</span>
+                <h2 class="section-title">Extracurricular & Recognition</h2>
+                <p class="section-subtitle">Community involvement, interviews, and creative achievements</p>
+            </div>
+            
+            <!-- Charity Work -->
+            <div class="extracurricular-category">
+                <h3 class="category-title">
+                    <i class="fas fa-heart"></i>
+                    Charity & Social Involvement
+                </h3>
+                <div class="charity-grid">
+                    <!-- Charity activities will be loaded dynamically -->
+                </div>
+            </div>
+            
+            <!-- Interviews -->
+            <div class="extracurricular-category">
+                <h3 class="category-title">
+                    <i class="fas fa-microphone"></i>
+                    Media Interviews
+                </h3>
+                <div class="interviews-grid">
+                    <!-- Interviews will be loaded dynamically -->
+                </div>
+            </div>
+            
+            <!-- Creative Awards -->
+            <div class="extracurricular-category">
+                <h3 class="category-title">
+                    <i class="fas fa-pen-fancy"></i>
+                    Creative Writing & Poetry Awards
+                </h3>
+                <div class="creative-awards-grid">
+                    <!-- Creative awards will be loaded dynamically -->
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Publications Section -->
     <section id="publications" class="publications">
         <div class="container">
             <div class="section-header">
-                <span class="section-number">05</span>
+                <span class="section-number">07</span>
                 <h2 class="section-title">Publications & Research</h2>
                 <p class="section-subtitle">Academic contributions and research publications</p>
             </div>
