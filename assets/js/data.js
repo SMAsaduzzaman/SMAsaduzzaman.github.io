@@ -314,7 +314,7 @@ const portfolioData = {
                   description: "Recognized by the judge panel for creative writing excellence and emotional depth.",
                   achievement: "Judge Panel Choice Writer",
                   image: "assets/img/poem_award.jpg",
-                  workDescription: "A Bengali poem reflecting inner turmoil, moral decay, and the haunting persistence of love even through self-destruction.
+                  workDescription: "A Bengali poem reflecting inner turmoil, moral decay, and the haunting persistence of love even through self-destruction."
             }
         ]
     },
