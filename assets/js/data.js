@@ -220,7 +220,7 @@ const portfolioData = {
             institution: "American International University-Bangladesh (AIUB)",
             year: "2019",
             description: "Receiving The Summa Cum Laude From The Honorable Dean and Associate Dean",
-            image: "assets/img/summacumlaudemain.jpg",
+            image: "assets/img/summacumlaudemain-min.jpg",
             details: [
                 "Summa cum laude is an honorary title used by educational institutions to signify a degree that was earned 'with the highest distinction.'"
             ]
@@ -241,7 +241,7 @@ const portfolioData = {
             institution: "American International University-Bangladesh (AIUB)",
             year: "2016-2019",
             description: "Receiving Deans Award For The First Time",
-            image: "assets/img/Deans2.jpg",
+            image: "assets/img/Deans1-min.jpg",
             details: [
                 "A dean's list is an academic award, or distinction, used to recognize the highest level scholarship demonstrated by students in a college or university",
                 "I have Received This Award For 4 Times"
@@ -283,7 +283,7 @@ const portfolioData = {
                     "Technology and innovation",
                     "Career guidance for students"
                 ],
-                image: "assets/img/interview-jafor-iqbal.jpg",
+                image: "assets/img/interview-jafor-iqbal-min.jpg",
                 link: "https://www.kishoralo.com/interview/%E2%80%98%E0%A6%A4%E0%A6%BE%E0%A6%B0%E0%A6%AA%E0%A6%B0-%E0%A6%86%E0%A6%87%E0%A6%A8%E0%A6%B8%E0%A7%8D%E0%A6%9F%E0%A6%BE%E0%A6%87%E0%A6%A8%E0%A6%95%E0%A7%87-%E0%A6%95%E0%A6%AE%E0%A7%8D%E0%A6%AA%E0%A6%BF%E0%A6%89%E0%A6%9F%E0%A6%BE%E0%A6%B0-%E0%A6%86%E0%A6%B0-%E0%A6%87%E0%A6%A8%E0%A7%8D%E0%A6%9F%E0%A6%BE%E0%A6%B0%E0%A6%A8%E0%A7%87%E0%A6%9F-%E0%A6%A6%E0%A7%87%E0%A6%96%E0%A6%BE%E0%A6%AC%E2%80%99"
             },
             {
@@ -300,7 +300,7 @@ const portfolioData = {
                     "Artistic inspiration and storytelling",
                     "Building creative communities"
                 ],
-                image: "assets/img/interview-ahsan-habib.jpg",
+                image: "assets/img/interview-ahsan-habib-min.jpg",
                 link: "https://www.kishoralo.com/interview/%E2%80%98%E0%A6%89%E0%A6%A8%E0%A7%8D%E0%A6%AE%E0%A6%BE%E0%A6%A6%E2%80%99-%E0%A6%AA%E0%A7%9C%E0%A7%87-%E0%A6%95%E0%A6%BE%E0%A6%89%E0%A6%95%E0%A7%87-%E0%A6%B9%E0%A6%BE%E0%A6%B8%E0%A6%A4%E0%A7%87-%E0%A6%A6%E0%A7%87%E0%A6%96%E0%A6%BF%E0%A6%A8%E0%A6%BF-%E0%A6%A4%E0%A6%AC%E0%A7%87-%E0%A6%85%E0%A6%A8%E0%A7%87%E0%A6%95%E0%A6%95%E0%A7%87%E0%A6%87"
             }
         ],
