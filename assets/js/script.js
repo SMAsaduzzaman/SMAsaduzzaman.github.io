@@ -489,7 +489,7 @@ function initializeContactForm() {
                 console.log('Email sent successfully!', response.status, response.text);
                 
                 // Show success message
-                showEnhancedNotification('Message sent successfully! Thank you for contacting me.', 'success');
+                showEnhancedNotification('Message sent successfully! Thank you for contacting me.I’ll be in touch shortly.', 'success');
                 
                 // Reset form with animation
                 form.style.transition = 'all 0.3s ease';
