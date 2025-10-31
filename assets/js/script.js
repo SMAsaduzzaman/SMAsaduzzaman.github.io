@@ -138,11 +138,11 @@ function initializeNavigation() {
         }
         
         // Hide/show navbar based on scroll direction
-        if (scrollTop > lastScrollTop && scrollTop > 100) {
-            navbar.classList.add('hidden');
-        } else {
-            navbar.classList.remove('hidden');
-        }
+        // if (scrollTop > lastScrollTop && scrollTop > 100) {
+        //     navbar.classList.add('hidden');
+        // } else {
+        //     navbar.classList.remove('hidden');
+        // }
         
         scrollDirection = scrollTop > lastScrollTop ? 'down' : 'up';
         lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
