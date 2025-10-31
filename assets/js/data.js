@@ -40,8 +40,8 @@ const portfolioData = {
             details: [
                 {
                     icon: "fas fa-graduation-cap",
-                    title: "Education",
-                    description: "Master's in Applied Statistics and Data Science from Jahangirnagar University (CGPA: 3.88/4.00)\nBachelor's in Electrical and Electronic Engineering from AIUB (CGPA: 3.96/4.00)"
+                    title: "Education"
+                    // description: "Master's in Applied Statistics and Data Science from Jahangirnagar University (CGPA: 3.88/4.00)\nBachelor's in Electrical and Electronic Engineering from AIUB (CGPA: 3.96/4.00)"
                 },
                 {
                     icon: "fas fa-briefcase",
