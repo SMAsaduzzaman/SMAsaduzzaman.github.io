@@ -77,7 +77,7 @@ const portfolioData = {
                 "Created Power BI dashboards for monitoring and analysis",
                 "Designed quantitative analysis plans and performed statistical analysis"
             ],
-            skills: ["KOBO", "Power BI", "Statistical Analysis"]
+            skills: ["KOBO", "Power BI","MySQL","Statistical Analysis"]
         },
         {
             period: "Jan 2024 - Apr 2025",
@@ -89,7 +89,7 @@ const portfolioData = {
                 "Collaborated with cross-functional teams on predictive modeling",
                 "Contributed to data-driven decision-making processes"
             ],
-            skills: ["AI/ML", "Python", "Predictive Modeling"]
+            skills: ["AI/ML", "Python","MySQL","Predictive Modeling"]
         },
         {
             period: "Jan 2022 - Dec 2023",
@@ -271,7 +271,7 @@ const portfolioData = {
         interviews: [
             {
                 title: "Interview with Muhammad Jafar Iqbal",
-                publication: "Prothom Alor Kishor Alo",
+                publication: "Kishor Alo (Monthly Magazine from Protom Alo)",
                 interviewer: "Interview Team Member",
                 date: "2019",
                 type: "Media Interview",
@@ -288,7 +288,7 @@ const portfolioData = {
             },
             {
                 title: "Interview with Ahsan Habib",
-                publication: "Prothom Alor Kishor Alo",
+                publication: "Kishor Alo (Monthly Magazine from Protom Alo)",
                 interviewer: "Interview Team Member",
                 date: "2019",
                 type: "Media Interview", 
