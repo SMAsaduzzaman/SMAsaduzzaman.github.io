@@ -23,10 +23,10 @@ const portfolioData = {
         // Typing Animation Titles
         typingTitles: [
             'Data Scientist',
-            'Research Analyst', 
+            'Data Analyst', 
             'ML Engineer',
             'Statistical Analyst',
-            'AI Specialist'
+            'AI Enthusiastics'
         ],
         
         // Hero Description
