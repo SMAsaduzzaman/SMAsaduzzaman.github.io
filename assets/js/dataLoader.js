@@ -440,16 +440,33 @@ function loadInterviews() {
         // Let CSS handle all styling
         
         interviewCard.innerHTML = `
-            <h4 class="interview-title">${interview.title}</h4>
-            <div class="interview-meta">
-                <span class="interview-publication">${interview.publication}</span>
-                <span class="interview-date">${interview.date}</span>
-            </div>
-            <p class="interview-description">${interview.description}</p>
-            <div class="interview-topics">
-                <h5>Topics Discussed</h5>
-                <div class="topics-list">
-                    ${interview.topics.map(topic => `<span class="topic-tag">${topic}</span>`).join('')}
+            ${interview.image ? `
+                <div class="interview-image-container">
+                    <div class="interview-image">
+                        <img src="${interview.image}" alt="${interview.title}" onerror="this.style.display='none'">
+                    </div>
+                    ${interview.link ? `
+                        <div class="interview-hover-overlay">
+                            <a href="${interview.link}" target="_blank" rel="noopener noreferrer" 
+                               class="interview-hover-btn" title="Read Full Interview">
+                                <i class="fas fa-external-link-alt"></i>
+                            </a>
+                        </div>
+                    ` : ''}
+                </div>
+            ` : ''}
+            <div class="interview-content">
+                <h4 class="interview-title">${interview.title}</h4>
+                <div class="interview-meta">
+                    <span class="interview-publication">${interview.publication}</span>
+                    <span class="interview-date">${interview.date}</span>
+                </div>
+                <p class="interview-description">${interview.description}</p>
+                <div class="interview-topics">
+                    <h5>Topics Discussed</h5>
+                    <div class="topics-list">
+                        ${interview.topics.map(topic => `<span class="topic-tag">${topic}</span>`).join('')}
+                    </div>
                 </div>
             </div>
         `;
@@ -553,6 +570,13 @@ window.addEventListener('load', function() {
             console.log('Retrying data load...');
             loadPortfolioData();
         }
+        
+        // Force reload publications if they're not loaded
+        const publicationsGrid = document.querySelector('.publications-grid');
+        if (publicationsGrid && publicationsGrid.children.length === 0) {
+            console.log('Publications not loaded, forcing reload...');
+            loadPublications();
+        }
     }, 1000);
 });
 
@@ -563,3 +587,4 @@ if (typeof module !== 'undefined' && module.exports) {
         updateTypingAnimation
     };
 }
+
