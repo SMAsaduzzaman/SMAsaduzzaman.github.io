@@ -256,7 +256,7 @@ const portfolioData = {
                 title: "Alor Swapno",
                 type: "Charity Organization",
                 role: "Volunteer & Social Activist",
-                period: "2018 - Present",
+                period: "2013 - Present",
                 description: "Active involvement in educational support and social welfare initiatives, helping underprivileged communities through various charitable programs and awareness campaigns.",
                 image: "assets/img/alor-swapno-logo.jpg", // Add logo when available
                 activities: [
@@ -273,7 +273,7 @@ const portfolioData = {
                 title: "Interview with Muhammad Jafar Iqbal",
                 publication: "Kishor Alo (Monthly Magazine from Protom Alo)",
                 interviewer: "Interview Team Member",
-                date: "2019",
+                date: "2014",
                 type: "Media Interview",
                 description: "Participated as a key interviewer in an exclusive interview with renowned Bangladeshi scientist and writer Muhammad Jafar Iqbal, discussing his scientific career, writing journey, and advice for youth pursuing STEM fields.",
                 topics: [
@@ -290,7 +290,7 @@ const portfolioData = {
                 title: "Interview with Ahsan Habib",
                 publication: "Kishor Alo (Monthly Magazine from Protom Alo)",
                 interviewer: "Interview Team Member",
-                date: "2019",
+                date: "2015",
                 type: "Media Interview", 
                 description: "Served as interviewer for an in-depth conversation with Bangladesh's renowned cartoonist Ahsan Habib, exploring his transition from banking to cartooning, founding of Unmad magazine, and contributions to Bangladesh's cartoon culture.",
                 topics: [
