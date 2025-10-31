@@ -218,7 +218,7 @@ const portfolioData = {
         {
             title: "Summa Cum Laude",
             institution: "American International University-Bangladesh (AIUB)",
-            year: "2019",
+            year: "2020",
             description: "Receiving The Summa Cum Laude From The Honorable Dean and Associate Dean",
             image: "assets/img/summacumlaudemain-min.jpg",
             details: [
@@ -228,7 +228,7 @@ const portfolioData = {
         {
             title: "Dean's For Capstone",
             institution: "American International University-Bangladesh (AIUB)",
-            year: "2019",
+            year: "2020",
             description: "Receiving Capstone From The Honorable Dean and Associate Dean",
             image: "assets/img/Capstone.jpg",
             details: [
