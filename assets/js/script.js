@@ -11,6 +11,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
 // ===== INITIALIZATION =====
 function initializePortfolio() {
+    // Initialize theme first
+    initializeTheme();
+    
     // Show loading screen briefly for effect
     setTimeout(() => {
         hideLoadingScreen();
@@ -42,6 +45,64 @@ function hideLoadingScreen() {
         loadingScreen.style.display = 'none';
         isLoading = false;
     }, 500);
+}
+
+// ===== DARK MODE / THEME FUNCTIONALITY =====
+function initializeTheme() {
+    const themeToggle = document.getElementById('theme-toggle');
+    const themeIcon = document.getElementById('theme-icon');
+    const html = document.documentElement;
+    
+    // Check for saved theme preference or default to light mode
+    const savedTheme = localStorage.getItem('theme') || 'light';
+    setTheme(savedTheme);
+    
+    // Theme toggle event listener
+    themeToggle.addEventListener('click', () => {
+        const currentTheme = html.getAttribute('data-theme') || 'light';
+        const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+        setTheme(newTheme);
+        
+        // Add click animation
+        themeToggle.style.transform = 'scale(0.9)';
+        setTimeout(() => {
+            themeToggle.style.transform = 'scale(1)';
+        }, 150);
+    });
+    
+    function setTheme(theme) {
+        html.setAttribute('data-theme', theme);
+        localStorage.setItem('theme', theme);
+        
+        // Update icon with animation
+        themeIcon.style.transform = 'scale(0)';
+        setTimeout(() => {
+            if (theme === 'dark') {
+                themeIcon.className = 'fas fa-sun';
+                themeToggle.setAttribute('aria-label', 'Switch to light mode');
+            } else {
+                themeIcon.className = 'fas fa-moon';
+                themeToggle.setAttribute('aria-label', 'Switch to dark mode');
+            }
+            themeIcon.style.transform = 'scale(1)';
+        }, 150);
+        
+        // Add theme transition effect
+        document.body.style.transition = 'all 0.3s ease';
+        setTimeout(() => {
+            document.body.style.transition = '';
+        }, 300);
+    }
+    
+    // Listen for system theme changes
+    if (window.matchMedia) {
+        window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
+            // Only auto-switch if user hasn't manually set a preference
+            if (!localStorage.getItem('theme')) {
+                setTheme(e.matches ? 'dark' : 'light');
+            }
+        });
+    }
 }
 
 // ===== NAVIGATION =====
@@ -1032,17 +1093,18 @@ if (!CSS.supports('backdrop-filter', 'blur(10px)')) {
 }
 
 // ===== SERVICE WORKER REGISTRATION (Optional) =====
-if ('serviceWorker' in navigator) {
-    window.addEventListener('load', () => {
-        navigator.serviceWorker.register('/sw.js')
-            .then(registration => {
-                console.log('SW registered: ', registration);
-            })
-            .catch(registrationError => {
-                console.log('SW registration failed: ', registrationError);
-            });
-    });
-}
+// Commented out to avoid errors when running locally
+// if ('serviceWorker' in navigator && location.protocol !== 'file:') {
+//     window.addEventListener('load', () => {
+//         navigator.serviceWorker.register('/sw.js')
+//             .then(registration => {
+//                 console.log('SW registered: ', registration);
+//             })
+//             .catch(registrationError => {
+//                 console.log('SW registration failed: ', registrationError);
+//             });
+//     });
+// }
 
 // ===== EXPORT FUNCTIONS FOR TESTING =====
 if (typeof module !== 'undefined' && module.exports) {

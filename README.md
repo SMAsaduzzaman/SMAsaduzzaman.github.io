@@ -18,7 +18,9 @@
 ⚡️ Fully Responsive\
 ⚡️ Valid HTML5 & CSS3\
 ⚡️ Typing animation using `Typed.js`\
-⚡️ Easy to modify
+⚡️ Dark/Night Mode Toggle\
+⚡️ Easy to modify\
+⚡️ Working Contact Form with EmailJS
 
 
 ## Sections 📚
@@ -249,6 +251,48 @@ If you run into issues:
 2. Validate your JSON syntax online
 3. Compare your changes with the original structure
 4. Feel free to reach out for assistance!
+
+---
+
+# 🌙 **Dark Mode Feature**
+
+Your portfolio includes a beautiful dark/night mode toggle that provides a better viewing experience in low-light conditions.
+
+## 🎯 **How It Works**
+
+- **Toggle Button**: Moon/Sun icon in the top navigation
+- **Auto-Save**: Remembers your preference in browser storage
+- **System Detection**: Automatically detects your OS theme preference
+- **Smooth Transitions**: All elements transition smoothly between themes
+- **Accessibility**: Proper ARIA labels and keyboard navigation
+
+## 🎨 **Dark Mode Features**
+
+- **Optimized Colors**: Carefully chosen dark theme colors for better readability
+- **Reduced Eye Strain**: Perfect for late-night coding or browsing
+- **Consistent Design**: All components adapt seamlessly to dark theme
+- **Professional Look**: Sleek dark interface maintains professional appearance
+
+## 🔧 **Customizing Dark Mode Colors**
+
+To customize dark mode colors, edit the CSS variables in `assets/css/style.css`:
+
+```css
+[data-theme="dark"] {
+    --primary-color: #60a5fa;      /* Light blue for dark mode */
+    --text-primary: #f9fafb;       /* Light text */
+    --bg-primary: #111827;         /* Dark background */
+    --bg-secondary: #1f2937;       /* Secondary dark background */
+    /* ... more variables */
+}
+```
+
+## 💡 **How Users Can Use It**
+
+1. **Manual Toggle**: Click the moon/sun icon in the navigation
+2. **Automatic**: Will respect system theme preference if no manual selection
+3. **Persistent**: Choice is saved and restored on next visit
+4. **Responsive**: Works perfectly on all device sizes
 
 ---
 
