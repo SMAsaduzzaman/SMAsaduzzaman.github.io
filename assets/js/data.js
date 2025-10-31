@@ -41,7 +41,7 @@ const portfolioData = {
                 {
                     icon: "fas fa-graduation-cap",
                     title: "Education",
-                    description: "Bachelor's in Electrical and Electronic Engineering from AIUB (CGPA: 3.96/4.00)\n5+ years in research, data analysis, and machine learning across humanitarian, healthcare, and cultural preservation sectors"
+                    description: "Master's in Applied Statistics and Data Science from Jahangirnagar University (CGPA: 3.88/4.00)\nBachelor's in Electrical and Electronic Engineering from AIUB (CGPA: 3.96/4.00)"
                 },
                 {
                     icon: "fas fa-briefcase",
