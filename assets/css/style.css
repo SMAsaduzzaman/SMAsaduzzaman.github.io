@@ -1885,8 +1885,76 @@ section {
 }
 
 /* Interview styling */
+.interview-image-container {
+    position: relative;
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+    border-radius: 12px 12px 0 0;
+}
+
+.interview-image {
+    width: 100%;
+    height: 100%;
+}
+
+.interview-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform var(--transition-base);
+}
+
+.interview-hover-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transform: scale(0.8);
+    transition: all 0.3s ease;
+    backdrop-filter: blur(4px);
+}
+
+.interview-image-container:hover .interview-hover-overlay {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.interview-image-container:hover .interview-image img {
+    transform: scale(1.1);
+}
+
+.interview-hover-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    background: var(--secondary-color);
+    color: white;
+    border-radius: 50%;
+    text-decoration: none;
+    font-size: 18px;
+    transition: all 0.2s ease;
+    box-shadow: 0 4px 15px rgba(245, 158, 11, 0.4);
+}
+
+.interview-hover-btn:hover {
+    background: #f59e0b;
+    transform: scale(1.15);
+    box-shadow: 0 6px 25px rgba(245, 158, 11, 0.6);
+    color: white;
+    text-decoration: none;
+}
+
 .interview-content {
-    padding: 0;
+    padding: var(--space-6);
 }
 
 .interview-title {
@@ -1941,6 +2009,37 @@ section {
     border-radius: 12px;
     font-size: 0.75rem;
     border: 1px solid var(--border-color, rgba(0,0,0,0.1));
+}
+
+.interview-link {
+    margin-top: var(--space-4);
+    text-align: center;
+}
+
+.read-more-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: var(--primary-color);
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: all var(--transition-base);
+    box-shadow: var(--shadow-sm);
+}
+
+.read-more-btn:hover {
+    background: var(--primary-dark);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+    color: white;
+}
+
+.read-more-btn i {
+    font-size: 0.8rem;
 }
 
 /* Creative Awards styling */

@@ -270,36 +270,38 @@ const portfolioData = {
         ],
         interviews: [
             {
-                title: "Interview by Jafor Iqbal",
+                title: "Interview with Muhammad Jafar Iqbal",
                 publication: "Prothom Alor Kishor Alo",
-                interviewer: "Jafor Iqbal",
+                interviewer: "Interview Team Member",
                 date: "2019",
                 type: "Media Interview",
-                description: "Featured interview discussing academic achievements, research interests, and future aspirations in data science and technology.",
+                description: "Participated as a key interviewer in an exclusive interview with renowned Bangladeshi scientist and writer Muhammad Jafar Iqbal, discussing his scientific career, writing journey, and advice for youth pursuing STEM fields.",
                 topics: [
-                    "Academic excellence and achievements",
-                    "Research interests in AI and ML",
-                    "Future career aspirations",
-                    "Student life and challenges"
+                    "Scientific research and academia",
+                    "Children's literature and creativity",
+                    "Education and youth development",
+                    "Technology and innovation",
+                    "Career guidance for students"
                 ],
-                image: "assets/img/interview-jafor-iqbal.jpg", // Add image when available
-                link: "#" // Add external link if available
+                image: "assets/img/interview-jafor-iqbal.jpg",
+                link: "https://www.kishoralo.com/interview/%E2%80%98%E0%A6%A4%E0%A6%BE%E0%A6%B0%E0%A6%AA%E0%A6%B0-%E0%A6%86%E0%A6%87%E0%A6%A8%E0%A6%B8%E0%A7%8D%E0%A6%9F%E0%A6%BE%E0%A6%87%E0%A6%A8%E0%A6%95%E0%A7%87-%E0%A6%95%E0%A6%AE%E0%A7%8D%E0%A6%AA%E0%A6%BF%E0%A6%89%E0%A6%9F%E0%A6%BE%E0%A6%B0-%E0%A6%86%E0%A6%B0-%E0%A6%87%E0%A6%A8%E0%A7%8D%E0%A6%9F%E0%A6%BE%E0%A6%B0%E0%A6%A8%E0%A7%87%E0%A6%9F-%E0%A6%A6%E0%A7%87%E0%A6%96%E0%A6%BE%E0%A6%AC%E2%80%99"
             },
             {
-                title: "Interview by Ahsan Habib",
+                title: "Interview with Ahsan Habib",
                 publication: "Prothom Alor Kishor Alo",
-                interviewer: "Ahsan Habib",
+                interviewer: "Interview Team Member",
                 date: "2019",
                 type: "Media Interview", 
-                description: "In-depth discussion about educational journey, technical projects, and contributions to student community development.",
+                description: "Served as interviewer for an in-depth conversation with Bangladesh's renowned cartoonist Ahsan Habib, exploring his transition from banking to cartooning, founding of Unmad magazine, and contributions to Bangladesh's cartoon culture.",
                 topics: [
-                    "Educational journey and milestones",
-                    "Technical project achievements",
-                    "Community involvement",
-                    "Leadership experiences"
+                    "Career transition and entrepreneurship",
+                    "Creative arts and cartoon culture",
+                    "Media and publishing industry",
+                    "Artistic inspiration and storytelling",
+                    "Building creative communities"
                 ],
-                image: "assets/img/interview-ahsan-habib.jpg", // Add image when available
-                link: "#" // Add external link if available
+                image: "assets/img/interview-ahsan-habib.jpg",
+                link: "https://www.kishoralo.com/interview/%E2%80%98%E0%A6%89%E0%A6%A8%E0%A7%8D%E0%A6%AE%E0%A6%BE%E0%A6%A6%E2%80%99-%E0%A6%AA%E0%A7%9C%E0%A7%87-%E0%A6%95%E0%A6%BE%E0%A6%89%E0%A6%95%E0%A7%87-%E0%A6%B9%E0%A6%BE%E0%A6%B8%E0%A6%A4%E0%A7%87-%E0%A6%A6%E0%A7%87%E0%A6%96%E0%A6%BF%E0%A6%A8%E0%A6%BF-%E0%A6%A4%E0%A6%AC%E0%A7%87-%E0%A6%85%E0%A6%A8%E0%A7%87%E0%A6%95%E0%A6%95%E0%A7%87%E0%A6%87"
             }
         ],
         awards: [

@@ -860,14 +860,14 @@ document.addEventListener('keydown', (e) => {
 
 // ===== SECTION NAVIGATION =====
 function navigateToNextSection() {
-    const sections = ['home', 'about', 'experience', 'projects', 'skills', 'publications', 'contact'];
+    const sections = ['home', 'about', 'experience', 'projects', 'skills', 'publications', 'awards', 'extracurricular', 'contact'];
     const currentIndex = sections.indexOf(currentSection);
     const nextIndex = (currentIndex + 1) % sections.length;
     smoothScrollTo(sections[nextIndex]);
 }
 
 function navigateToPrevSection() {
-    const sections = ['home', 'about', 'experience', 'projects', 'skills', 'publications', 'contact'];
+    const sections = ['home', 'about', 'experience', 'projects', 'skills', 'publications', 'awards', 'extracurricular', 'contact'];
     const currentIndex = sections.indexOf(currentSection);
     const prevIndex = currentIndex === 0 ? sections.length - 1 : currentIndex - 1;
     smoothScrollTo(sections[prevIndex]);
