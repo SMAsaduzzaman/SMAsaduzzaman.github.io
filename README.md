@@ -252,6 +252,110 @@ If you run into issues:
 
 ---
 
+# 📧 **Contact Form Email Setup**
+
+Your portfolio includes a working contact form that can send real emails using EmailJS (free service).
+
+## 🚀 **Setting Up Email Functionality**
+
+### **Step 1: Create EmailJS Account**
+1. Go to [https://www.emailjs.com/](https://www.emailjs.com/)
+2. Sign up for a **free account** (200 emails/month)
+3. Verify your email address
+
+### **Step 2: Add Email Service**
+1. In EmailJS dashboard, go to **"Email Services"**
+2. Click **"Add New Service"**
+3. Choose your email provider:
+   - **Gmail** (recommended)
+   - **Outlook**
+   - **Yahoo**
+   - Or any other supported service
+4. Follow the setup instructions to connect your email
+5. **Copy the Service ID** (e.g., `service_abc123`)
+
+### **Step 3: Create Email Template**
+1. Go to **"Email Templates"** in the dashboard
+2. Click **"Create New Template"**
+3. Use this template content:
+
+```
+Subject: New message from {{from_name}} - {{subject}}
+
+From: {{from_name}}
+Email: {{from_email}}
+Subject: {{subject}}
+
+Message:
+{{message}}
+
+---
+Sent from your portfolio contact form
+```
+
+4. **Save the template** and copy the **Template ID** (e.g., `template_xyz789`)
+
+### **Step 4: Get Public Key**
+1. Go to **"Integration"** in the dashboard
+2. Copy your **Public Key** (e.g., `abc123def456`)
+
+### **Step 5: Update Configuration**
+Edit `assets/js/emailConfig.js` and replace the placeholder values:
+
+```javascript
+const EMAIL_CONFIG = {
+    publicKey: 'your_actual_public_key_here',
+    serviceId: 'your_actual_service_id_here', 
+    templateId: 'your_actual_template_id_here'
+};
+```
+
+### **Step 6: Test Your Contact Form**
+1. Open your portfolio website
+2. Fill out the contact form completely
+3. Click **"Send Message"**
+4. You should receive an email in your inbox!
+
+## 🎯 **What Happens When Form is Submitted**
+
+- **Before Setup**: Shows "EmailJS not configured" error
+- **After Setup**: 
+  - Shows loading spinner
+  - Sends real email to your inbox
+  - Displays success message
+  - Resets form automatically
+
+## 🔧 **Troubleshooting**
+
+### **Form Not Working?**
+1. Check browser console (F12) for error messages
+2. Verify all three values in `emailConfig.js` are correct
+3. Make sure your email service is properly connected in EmailJS
+4. Test with a simple message first
+
+### **Not Receiving Emails?**
+1. Check your spam/junk folder
+2. Verify the email template is properly saved
+3. Make sure your email service is active in EmailJS dashboard
+4. Try sending a test email from EmailJS dashboard first
+
+### **Console Errors?**
+- `EMAIL_CONFIG is not defined`: Make sure `emailConfig.js` loads before `script.js`
+- `emailjs is not defined`: Check if EmailJS CDN is loading properly
+- `Service ID not found`: Double-check your service ID in EmailJS dashboard
+
+## 💡 **Free Tier Limits**
+- **200 emails per month** (perfect for portfolio contact forms)
+- **No credit card required**
+- **Reliable delivery**
+
+## 🛡 **Security Notes**
+- Public key is safe to expose (it's meant to be public)
+- EmailJS handles all the secure email sending
+- No server required - works with static hosting (GitHub Pages)
+
+---
+
 *Happy updating! 🎉*
 
 ## License 📄

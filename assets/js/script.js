@@ -363,6 +363,8 @@ function initializeContactForm() {
     
     console.log('Initializing contact form...');
     
+    // Initialize EmailJS (done in emailConfig.js)
+    
     form.addEventListener('submit', (e) => {
         e.preventDefault();
         console.log('Form submitted!');
@@ -395,25 +397,21 @@ function initializeContactForm() {
             return;
         }
         
-        // Simulate sending delay for better UX
-        setTimeout(() => {
-            try {
-                // Get email from data or use default
-                let recipientEmail = 'smasaduzzaman95@gmail.com';
-                if (typeof portfolioData !== 'undefined' && portfolioData.personal.email) {
-                    recipientEmail = portfolioData.personal.email;
-                }
+        // Send email using EmailJS
+        const templateParams = {
+            from_name: name,
+            from_email: email,
+            subject: subject,
+            message: message,
+            to_email: 'smasaduzzaman95@gmail.com' // Your email
+        };
+        
+        emailjs.send(EMAIL_CONFIG.serviceId, EMAIL_CONFIG.templateId, templateParams)
+            .then((response) => {
+                console.log('Email sent successfully!', response.status, response.text);
                 
-                // Create mailto link
-                const mailtoLink = `mailto:${recipientEmail}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`)}`;
-                
-                console.log('Opening mailto link:', mailtoLink);
-                
-                // Open email client
-                window.location.href = mailtoLink;
-                
-                // Show success message with animation
-                showEnhancedNotification('Message prepared! Your email client should open shortly.', 'success');
+                // Show success message
+                showEnhancedNotification('Message sent successfully! Thank you for contacting me.', 'success');
                 
                 // Reset form with animation
                 form.style.transition = 'all 0.3s ease';
@@ -438,13 +436,13 @@ function initializeContactForm() {
                     submitBtn.disabled = false;
                 }, 500);
                 
-            } catch (error) {
-                console.error('Error processing form:', error);
-                showEnhancedNotification('Error sending message. Please try again.', 'error');
+            })
+            .catch((error) => {
+                console.error('Email sending failed:', error);
+                showEnhancedNotification('Failed to send message. Please try again or contact me directly.', 'error');
                 submitBtn.innerHTML = originalText;
                 submitBtn.disabled = false;
-            }
-        }, 1000);
+            });
     });
     
     // Floating label effect
