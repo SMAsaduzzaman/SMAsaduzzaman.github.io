@@ -133,7 +133,7 @@ const portfolioData = {
         {
             title: "Maternal Risk Assessment Platform",
             description: "ML-powered platform using Random Forest algorithm to predict maternal health risks with unlimited testing capabilities.",
-            image: "assets/img/insurance.jpg",
+            image: "assets/img/maternal_risk.jpg",
             technologies: ["Python", "Scikit-learn", "Flask", "Docker"],
             category: ["ml", "web"],
             links: {
