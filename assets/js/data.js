@@ -41,7 +41,7 @@ const portfolioData = {
                 {
                     icon: "fas fa-graduation-cap",
                     title: "Education",
-                    description: "Bachelor's in Electrical and Electronic Engineering from AIUB (CGPA: 3.96/4.00)"
+                    description: "Bachelor's in Electrical and Electronic Engineering from AIUB (CGPA: 3.96/4.00)\n5+ years in research, data analysis, and machine learning across humanitarian, healthcare, and cultural preservation sectors"
                 },
                 {
                     icon: "fas fa-briefcase",
