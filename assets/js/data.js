@@ -326,7 +326,7 @@ const portfolioData = {
             journal: "Data Mining and Knowledge Discovery, Springer US, 2025",
             authors: "Inzamamul Alam, Md Samiullah, S M Asaduzzaman, et al.",
             tags: ["Machine Learning", "Computer Vision", "Cybersecurity"],
-            link: "https://dl.acm.org/doi/10.1145/3871765",
+            link: "https://link.springer.com/article/10.1007/s10618-024-01078-z",
             linkText: "ACM Digital Library (open-access)"
         },
         {
@@ -334,7 +334,7 @@ const portfolioData = {
             journal: "6th International Conference on Inventive Systems and Control (ICISC), 2022",
             authors: "Shah Siddiqui, Elias Hossain, S M Asaduzzaman, et al.",
             tags: ["Healthcare", "Machine Learning", "Mobile Apps"],
-            link: "https://link.springer.com/article/10.1007/s11042-022-12915-5",
+            link: "http://link.springer.com/chapter/10.1007/978-981-19-1012-8_55",
             linkText: "Springer Link (open-access)"
         },
         {
@@ -342,7 +342,7 @@ const portfolioData = {
             journal: "International Conference on Communication Engineering and Technology, 2019",
             authors: "S. A. Khan, S. M. Asaduzzaman, A. Debnath, M. Hossain",
             tags: ["Computer Vision", "CNN", "Accessibility"],
-            link: "https://ieeexplore.ieee.org/document/8903606",
+            link: "https://ieeexplore.ieee.org/abstract/document/8726895",
             linkText: "IEEE Xplore (open-access)"
         },
         {
